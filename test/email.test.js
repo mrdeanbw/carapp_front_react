@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { EmailPage } from '../../frontend/src/EmailPage'
+import { EmailPage } from '../src/EmailPage'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 describe('render the EmailPage using ReactDOM', () => {
