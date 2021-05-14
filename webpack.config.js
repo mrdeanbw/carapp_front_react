@@ -11,12 +11,6 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader'
-        // use: {
-        //   loader: 'babel-loader',
-        //   options: {
-        //     presets: ['@babel/env', '@babel/react']
-        //   }
-        // }
       }
     ]
   },

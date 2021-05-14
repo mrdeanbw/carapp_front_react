@@ -6,3 +6,8 @@
       "stage-0"
   ]
 }
+
+// for npm test
+// {
+//   "presets": ["@babel/env", "@babel/react"]
+// }
