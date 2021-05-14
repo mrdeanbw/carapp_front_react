@@ -13,7 +13,7 @@ function submitData (carData) {
     body: JSON.stringify({ carData })
   }
 
-  return fetch(`http://localhost:4000/vehicles`, requestOptions)
+  return fetch('http://localhost:4000/vehicles', requestOptions)
 }
 
 function getAll () {
@@ -22,5 +22,5 @@ function getAll () {
     headers: authHeader()
   }
 
-  return fetch(`http://localhost:4000/vehicles`, requestOptions)
+  return fetch('http://localhost:4000/vehicles', requestOptions)
 }

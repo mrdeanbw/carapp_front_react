@@ -54,7 +54,7 @@ function register (username, password, firstName, lastName, license) {
     body: JSON.stringify({ username, password, firstName, lastName, license })
   }
 
-  //${config.apiUrl}
+  // ${config.apiUrl}
   return fetch('http://localhost:4000/users/register', requestOptions)
     .then(handleResponse)
     .then(user => {
