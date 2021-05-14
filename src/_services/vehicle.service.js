@@ -13,7 +13,10 @@ function submitData (carData) {
     body: JSON.stringify({ carData })
   }
 
-  return fetch('http://localhost:4000/vehicles', requestOptions)
+  return fetch(
+    process.env.PORT || 'http://localhost:4000/vehicles',
+    requestOptions
+  )
 }
 
 function getAll () {
@@ -22,5 +25,8 @@ function getAll () {
     headers: authHeader()
   }
 
-  return fetch('http://localhost:4000/vehicles', requestOptions)
+  return fetch(
+    process.env.PORT || 'http://localhost:4000/vehicles',
+    requestOptions
+  )
 }
