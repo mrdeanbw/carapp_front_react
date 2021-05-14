@@ -10,5 +10,5 @@ function sendEmail (service, user, password, sender, receiver, userId) {
     body: JSON.stringify({ service, user, password, sender, receiver, userId })
   }
 
-  return fetch(`http://localhost:4000/emails`, requestOptions)
+  return fetch('http://localhost:4000/emails', requestOptions)
 }

@@ -16,7 +16,7 @@ function login (username, password) {
   }
 
   // ${config.apiUrl}
-  return fetch(`http://localhost:4000/users/authenticate`, requestOptions)
+  return fetch('http://localhost:4000/users/authenticate', requestOptions)
     .then(handleResponse)
     .then(user => {
       // login successful if there's a user in the response
@@ -42,7 +42,7 @@ function getAll () {
     headers: authHeader()
   }
   // ${config.apiUrl}
-  return fetch(`http://localhost:4000/users`, requestOptions).then(
+  return fetch('http://localhost:4000/users', requestOptions).then(
     handleResponse
   )
 }
@@ -55,7 +55,7 @@ function register (username, password, firstName, lastName, license) {
   }
 
   //${config.apiUrl}
-  return fetch(`http://localhost:4000/users/register`, requestOptions)
+  return fetch('http://localhost:4000/users/register', requestOptions)
     .then(handleResponse)
     .then(user => {
       // registration successful if there's...
