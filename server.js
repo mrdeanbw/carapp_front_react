@@ -1,11 +1,9 @@
-var path = require('path')
 var express = require('express')
-
 var app = express()
+var path = require('path')
 
-app.use(express.static(path.join(__dirname, 'dist')))
-app.set('port', process.env.PORT || 4000)
-
-var server = app.listen(app.get('port'), function () {
-  console.log('listening on port ', server.address().port)
+app.use(express.static(__dirname + '/'))
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './src/index.html'))
 })
+app.listen(process.env.PORT || 4000)
