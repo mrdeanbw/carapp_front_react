@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "heroku-prebuild": "npm install --dev",
-    "heroku-postbuild": "webpack --config webpack.config.js",
+    "heroku-postbuild": "webpack -p",
     "start": "webpack-dev-server --open",
     "test": "jest --no-cache"
   },
