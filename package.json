@@ -9,7 +9,7 @@
   "scripts": {
     "heroku-prebuild": "npm install --dev",
     "heroku-postbuild": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --open && node server.js",
+    "start": "webpack-dev-server --open",
     "test": "jest --no-cache"
   },
   "dependencies": {
