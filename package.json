@@ -7,9 +7,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "heroku-prebuild": "npm install --dev",
-    "heroku-postbuild": "webpack -p",
-    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "start:dev": "webpack-dev-server --hot --open",
+    "dev": "webpack-dev-server --open",
+    "serve": "node app.js",
     "test": "jest --no-cache"
   },
   "dependencies": {
@@ -37,8 +38,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.24.1",
+    "dotenv": "^9.0.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^6.0.0",
     "path": "^0.12.7"
   }
 }

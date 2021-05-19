@@ -1,3 +1,4 @@
+import { config } from '../_config'
 import { authHeader } from '../_helpers'
 
 export const vehicleService = {
@@ -14,7 +15,7 @@ function submitData (carData) {
   }
 
   return fetch(
-    process.env.PORT || 'http://localhost:4000/vehicles',
+    `${config.API_BASE_URL}/vehicles`,
     requestOptions
   )
 }
@@ -26,7 +27,7 @@ function getAll () {
   }
 
   return fetch(
-    process.env.PORT || 'http://localhost:4000/vehicles',
+    `${config.API_BASE_URL}/vehicles`,
     requestOptions
   )
 }

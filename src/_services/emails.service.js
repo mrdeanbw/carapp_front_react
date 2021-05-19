@@ -1,3 +1,5 @@
+import { config } from "../_config"
+
 export const emailsService = {
   sendEmail
 }
@@ -11,7 +13,7 @@ function sendEmail (service, user, password, sender, receiver, userId) {
   }
 
   return fetch(
-    process.env.PORT || 'http://localhost:4000/emails',
+    `${config.API_BASE_URL}/emails`,
     requestOptions
   )
 }

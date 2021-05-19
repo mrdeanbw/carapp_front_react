@@ -1,4 +1,5 @@
 // import config from 'config'
+import { config } from '../_config'
 import { authHeader } from '../_helpers'
 
 export const userService = {
@@ -14,10 +15,10 @@ function login (username, password) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
   }
-
+  console.log('config.API_BASE_URL------', config.API_BASE_URL)
   // ${config.apiUrl}
   return fetch(
-    process.env.PORT || 'http://localhost:4000/users/authenticate',
+    `${config.API_BASE_URL}/users/authenticate`,
     requestOptions
   )
     .then(handleResponse)
@@ -46,7 +47,7 @@ function getAll () {
   }
   // ${config.apiUrl}
   return fetch(
-    process.env.PORT || 'http://localhost:4000/users',
+    `${config.API_BASE_URL}/users`,
     requestOptions
   ).then(handleResponse)
 }
@@ -60,7 +61,7 @@ function register (username, password, firstName, lastName, license) {
 
   // ${config.apiUrl}
   return fetch(
-    process.env.PORT || 'http://localhost:4000/users/register',
+    `${config.API_BASE_URL}/users/register`,
     requestOptions
   )
     .then(handleResponse)
