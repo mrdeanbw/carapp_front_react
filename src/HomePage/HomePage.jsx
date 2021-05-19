@@ -1,6 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import ChevyImg from '../../images/Chevy.png';
+import FordImg from '../../images/Ford.png';
+import HondaImg from '../../images/Honda.png';
+import LamboImg from '../../images/Lambo.png';
+
+
 class HomePage extends React.Component {
   constructor (props) {
     super(props)
@@ -51,7 +57,8 @@ class HomePage extends React.Component {
           <div class='carousel-inner'>
             <div class='carousel-item active'>
               <img
-                src='../../images/Chevy.png'
+                // src='../../images/Chevy.png'
+                src={ChevyImg}
                 alt='Chevrolet Truck'
                 width='640'
                 height='480'
@@ -59,7 +66,8 @@ class HomePage extends React.Component {
             </div>
             <div class='carousel-item'>
               <img
-                src='../../images/Ford.png'
+                //src='../../images/Ford.png'
+                src={FordImg}
                 alt='Ford Fusion'
                 width='640'
                 height='480'
@@ -67,7 +75,8 @@ class HomePage extends React.Component {
             </div>
             <div class='carousel-item'>
               <img
-                src='../../images/Honda.png'
+                // src='../../images/Honda.png'
+                src={HondaImg}
                 alt='Honda Civic'
                 width='640'
                 height='480'
@@ -75,7 +84,8 @@ class HomePage extends React.Component {
             </div>
             <div class='carousel-item'>
               <img
-                src='../../images/Lambo.png'
+                // src='../../images/Lambo.png'
+                src={LamboImg}
                 alt='Lamborghini'
                 width='640'
                 height='480'
